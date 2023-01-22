@@ -1,11 +1,11 @@
 import React from 'react'
-
-function home() {
-  return (
+import Carosul from '../components/Carosul'
+const Home = () => {
+  return (      
     <div>
-      
+      <Carosul/>
     </div>
   )
 }
 
-export default home
+export default Home
