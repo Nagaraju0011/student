@@ -1,10 +1,10 @@
 import React from 'react'
-
-function Input() {
+import Form from 'react-bootstrap/Form';
+const Input = (props) => {
   return (
-    <input/>
-
+    <Form.Control type={props.type} placeholder="Enter email" />
   )
 }
 
 export default Input
+

@@ -1,0 +1,22 @@
+$theme-colors: (
+    "primary":    #00ADB5,
+    "secondary": #F8B500 ,
+    "success":  #06FF00,
+    "info":   #00ADB5 ,
+    "warning":   #F8B500 ,
+    "danger":    #FF1700 ,
+    "light": #ECE8D9 ,
+    "dark":  #393E46  ,
+
+);
+
+
+
+.navbar-brand{font-weight: 600; }
+
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+
+
+
