@@ -1,47 +1,39 @@
-import React from 'react'
-import Carousel from 'react-bootstrap/Carousel';
+import React from "react";
+import { Carousel, Row, Col, Container } from "react-bootstrap";
+import SubmitButton from "./SubmitButton";
 const Carosul = () => {
   return (
     <Carousel>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://static.tnn.in/thumb/msid-93205022,imgsize-66742,width-1280,height-720,resizemode-75/93205022.jpg"
+          src="https://www.daysoftheyear.com/wp-content/uploads/world-student-day1.jpg"
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://www.daysoftheyear.com/wp-content/uploads/world-student-day1.jpg"
-          alt="Second slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://images.indianexpress.com/2019/07/uk-india-student.jpg"
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          <Container>
+            <Row>
+              <Col md={6}>
+                <h3>Learn Development</h3>
+                <p>
+                  Business, Technology and Creative Skills taught by industry
+                  experts. Explore a wide range of skills with our professional
+                  tutorials.
+                </p>
+                <SubmitButton value="Read More" variant="light" size="lg" />
+              </Col>
+              <Col md={6}>
+                <img
+                  src="http://tutorio-bootstrap.frontendmatter.com/assets/images/macbook.png"
+                  alt=""
+                />
+              </Col>
+            </Row>
+          </Container>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
-  )
-}
+  );
+};
 
-export default Carosul
+export default Carosul;
