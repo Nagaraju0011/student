@@ -1,12 +1,12 @@
 import React from 'react'
 
-import Form from 'react-bootstrap/Form';
+import {Form, Container} from 'react-bootstrap';
 import Input from '../components/Input';
-import Buttons from '../components/Buttons';
+import Buttons from '../components/SubmitButton';
 
 const Login = () => {
   return (
-
+    <Container>
     <Form>
       <h3>Login Page</h3>
       <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -15,7 +15,7 @@ const Login = () => {
       </Form.Group>    
       <Buttons variant="primary" type="submit" value="Submit" />
   </Form>
-
+  </Container>
   )
 }
 

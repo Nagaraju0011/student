@@ -1,22 +1,222 @@
 $theme-colors: (
-    "primary":    #00ADB5,
-    "secondary": #F8B500 ,
-    "success":  #06FF00,
-    "info":   #00ADB5 ,
-    "warning":   #F8B500 ,
-    "danger":    #FF1700 ,
-    "light": #ECE8D9 ,
-    "dark":  #393E46  ,
-
+  "primary": #2c84dd,
+  "secondary": #1d2126,
+  "success": #2dce89,
+  "info": #11cdef,
+  "warning": #fb6340,
+  "danger": #ed0b4c,
+  "light": #f8f9fa,
+  "dark": #1d2126,
 );
 
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
 
+// scss-docs-start color-variables
+$blue: #2c84dd !default;
+$indigo: #11cdef !default;
+$purple: #6f42c1 !default;
+$pink: #d63384 !default;
+$red: #dc3545 !default;
+$orange: #fd7e14 !default;
+$yellow: #ffc107 !default;
+$green: #198754 !default;
+$teal: #20c997 !default;
+$cyan: #0dcaf0 !default;
+$dark: #1d2126 !default;
+// scss-docs-end color-variables
+* {
+  font-family: "Poppins", sans-serif;
+}
 
-.navbar-brand{font-weight: 600; }
+.navbar {
+  background: $blue; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    $dark,
+    $dark
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    $dark,
+    $dark
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 66px;
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    &:hover {
+      color: #fff !important;
+    }
+  }
+  .navbar-nav {
+    a {
+      color: #858d94;
+    }
+  }
+  .navbar-brand {
+    font-weight: 700;
+    font-family: "Quicksand", sans-serif;
+  }
+  input.form-control {
+    height: 40px;
+  }
+}
 
+.log-register-form {
+  max-width: 450px;
+  margin: 0px auto;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15); /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15); /* Firefox 3.5 - 3.6 */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15); /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+  border: none !important;
+  padding: 16px 24px;
+  .row {
+    margin-bottom: 15px;
+    label {
+      margin-right: 10px;
+      width: 140px;
+      font-size: 14px;
+    }
+    input {
+      border: solid 1px #999;
+      padding: 5px 15px;
+      width: 250px;
+    }
+  }
+}
+.log-register-form h4 {
+  color: $orange;
+}
+
+.btn-primary {
+  color: #fff !important;
+}
+
+.navSearch {
+  input.form-control {
+    height: 44px;
+    background-color: #303840;
+    border-color: #303840;
+    width: 400px;
+    color: #fff;
+    font-weight: 500;
+    &:focus {
+      outline: none !important;
+      box-shadow: none !important;
+    }
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #858d94;
+      opacity: 1; /* Firefox */
+    }
+
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #858d94;
+    }
+
+    &::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: #858d94;
+    }
+  }
+
+  button {
+    background-color: #303840;
+    border-color: #303840;
+    font-size: 20px;
+    &:hover {
+      background-color: #303840;
+      border-color: #303840;
+    }
+    svg {
+      color: #868e96;
+    }
+  }
+}
+
+.homePage {
+  .carousel.slide {
+    .carousel-inner {
+      position: relative;
+
+      .carousel-item {
+        height: calc(100vh - 100px);
+        &::before {
+          position: absolute;
+          content: "";
+          background-color: rgba(44, 132, 221, 0.8);
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          z-index: 1;
+        }
+        .carousel-caption {
+          .container {
+            height: 100%;
+          }
+          z-index: 2;
+          top: 0px;
+          bottom: 0px;
+          text-align: left;
+          .row {
+            height: 100%;
+            align-items: center;
+          }
+          h3 {
+            font-size: 44px;
+            margin-bottom: 20px;
+            font-weight: 700;
+          }
+          p {
+            font-size: 20px;
+            font-weight: 300;
+            margin-bottom: 30px;
+          }
+          button {
+            font-size: 16px;
+            width: 150px;
+            box-shadow: 0 6px 6px -3px rgb(48 56 64 / 20%),
+              0 10px 14px 1px rgb(48 56 64 / 14%),
+              0 4px 18px 3px rgb(48 56 64 / 12%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.innerBanner {
+  background-image: linear-gradient(128deg, #1e6dbd, #3287db);
+  padding: 30px 0px;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-toggler {
+    border: none !important;
+    color: white !important;
+    padding-left: 0px !important;
+  }
+  .navbar-toggler:focus,
+  .navbar-toggler:active {
+    box-shadow: none;
+  }
+  .navbar-toggler svg {
+    width: 38px;
+    height: 38px;
+  }
+}
 
 @import "node_modules/bootstrap/scss/bootstrap";
-
-
-
-
